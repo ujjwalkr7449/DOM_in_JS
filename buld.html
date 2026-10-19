@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulb Project</title>
+</head>
+<body>
+    <h1 id="status">Bulb is OFF</h1>
+
+    <button id="toggleBtn">Turn ON</button>
+
+    <script>
+        const status = document.getElementById("status");
+        const btn = document.getElementById("toggleBtn");
+
+        let isOn = false;
+
+        btn.addEventListener("click", () => {
+            isOn = !isOn;
+
+            if (isOn) {
+                status.textContent = "Bulb is ON";
+                status.style.color = "orange";
+                btn.textContent = "Turn OFF";
+            } else {
+                status.textContent = "Bulb is OFF";
+                status.style.color = "black";
+                btn.textContent = "Turn ON";
+            }
+        });
+    </script>
+</body>
+</html>
