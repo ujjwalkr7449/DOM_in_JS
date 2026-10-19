@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>My Learning List</h1>
+
+    <p class="item">Learn HTML</p>
+    <p class="item">Learn CSS</p>
+    <p class="item">Learn JavaScript</p>
+    <p class="item">Learn React</p>
+
+    <button id="changeBtn">Change All</button>
+
+    <script>
+        const items = document.querySelectorAll(".item");
+        const btn = document.getElementById("changeBtn");
+
+        btn.addEventListener("click", () => {
+            items.forEach((item) => {
+                item.style.color = "blue";
+                item.style.fontWeight = "bold";
+            });
+        });
+    </script>
+</body>
+</html>
