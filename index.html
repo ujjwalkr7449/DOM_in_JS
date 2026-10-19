@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+</head>
+<body>
+    <h1 id="heading">Hello World!</h1>
+    <button id="changeBtn">Change Heading</button>
+
+    <script>
+        const heading = document.getElementById("heading");
+        const button = document.getElementById("changeBtn");
+
+        button.addEventListener("click", function () {
+            heading.textContent = "Welcome to JavaScript DOM!";
+        });
+    </script>
+</body>
+</html>
