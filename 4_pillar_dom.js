@@ -11,3 +11,10 @@ title.textContent = "New Title";
 
 //Change how an element looks.
 title.style.color = "blue";
+
+//Pillar 4: Event handling
+
+//Make something happen when a user interacts with the page.
+button.addEventListener("click", () => {
+    title.textContent = "Button Clicked!";
+});
