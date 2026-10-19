@@ -18,3 +18,7 @@ title.style.color = "blue";
 button.addEventListener("click", () => {
     title.textContent = "Button Clicked!";
 });
+
+
+//One combined example
+

@@ -1,0 +1,13 @@
+<h1 id="title">Learn DOM</h1>
+<button id="btn">Click Me</button>
+
+<script>
+    const title = document.querySelector("#title");
+    const btn = document.querySelector("#btn");
+
+    btn.addEventListener("click", () => {
+        title.textContent = "DOM is easy!";
+        title.style.color = "green";
+        title.style.fontSize = "40px";
+    });
+</script>
