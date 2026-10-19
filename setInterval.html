@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1 id="counter">0</h1>
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+
+    <script>
+        const counter = document.getElementById("counter");
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+
+        let count = 0;
+        let intervalId = null;
+
+        startBtn.addEventListener("click", () => {
+            // Prevent multiple intervals from starting
+            if (intervalId !== null) return;
+
+            intervalId = setInterval(() => {
+                count++;
+                counter.textContent = count;
+            }, 1000);
+        });
+
+        stopBtn.addEventListener("click", () => {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+    </script>
+</body>
+</html>
