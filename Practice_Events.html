@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1 id="title">Practice Events</h1>
+
+    <button id="clickBtn">Click</button>
+    <button id="doubleBtn">Double Click</button>
+    <input id="nameInput" placeholder="Type your name">
+
+    <p id="output">Your result appears here.</p>
+
+    <script>
+        const title = document.getElementById("title");
+        const output = document.getElementById("output");
+        const input = document.getElementById("nameInput");
+
+        document.getElementById("clickBtn")
+            .addEventListener("click", () => {
+                title.style.color = "blue";
+                output.textContent = "You clicked the button!";
+            });
+
+        document.getElementById("doubleBtn")
+            .addEventListener("dblclick", () => {
+                title.style.color = "red";
+                output.textContent = "You double-clicked!";
+            });
+
+        input.addEventListener("input", () => {
+            output.textContent = "Hello, " + input.value;
+        });
+    </script>
+</body>
+</html>
